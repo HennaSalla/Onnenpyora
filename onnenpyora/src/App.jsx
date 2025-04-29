@@ -11,7 +11,7 @@ import {Otsikko} from './Otsikko';
 
 // Viten mukana tulleiden tiedostojen importit
 import './App.css';
-import {useState} from 'react'
+import {useState} from 'react';
 
 // Sivun omat ulkonäkö muutokset
 const Main = styled.main`
@@ -41,7 +41,7 @@ function App() {
   };
 
   // Osallistujien poiston hallinta
-  const poistaOsallistuja = (index: number) => => {
+  const poistaOsallistuja = (index: number) => {
     setNames(names.filter((_, i) => i !== index));
   };
 
