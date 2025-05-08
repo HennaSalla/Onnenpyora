@@ -1,1 +1,0 @@
-// Lisää kontrollit osallistujien lisäämiseen ja näyttämiseen.

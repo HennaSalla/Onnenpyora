@@ -2,12 +2,13 @@
 
 // Tarvittavat importit
 import styled from 'styled-components';
+import React from 'react'
 
 // Tuodaan loput tiedostot pää tiedostoon
-import {Osallistujat} from './Osallistujat';
-import {Kysymys} from './Kysymys';
-import {Pyora} from './Pyora';
-import {Otsikko} from './Otsikko';
+import {Participants} from './Osallistujat';
+import {Question} from './Kysymys';
+import {Wheel} from './Pyora';
+import {Header} from './Otsikko';
 
 // Viten mukana tulleiden tiedostojen importit
 import './App.css';
@@ -34,25 +35,25 @@ function App() {
   const [names, setNames] = useState<string[]>([]);
 
   // Osallistujien lisäämisen hallinta
-  const lisääOsallistuja = (name: string) => {
+  const handleAddName = (name: string) => {
     if (names.length < MAX_PARTICIPANTS) {
       setNames([...names, name]);
     }
   };
 
   // Osallistujien poiston hallinta
-  const poistaOsallistuja = (index: number) => {
+  const handleRemoveName = (index: number) => {
     setNames(names.filter((_, i) => i !== index));
   };
 
   // Osallistujien sekoitus randomisti
-  const sekoitaOsallistujat = () => {
+  const shuffleNames = () => {
     const shuffledNames = [...names].sort(() => Math.random() - 0.5);
     setNames(shuffledNames);
   };
 
   // Osallistujien lajittelu aakkos järjestykseen
-  const lajitteleOsallistujat = () => {
+  const sortNames = () => {
     const sortedNames = [...names].sort((a,b) => a.localeCompare(b));
     setNames(sortedNames);
   };
@@ -60,17 +61,17 @@ function App() {
   // Tuodaan muut komponentit tiedostoon
   return (
     <>
-      <Otsikko />
-      <Kysymys />
+      <Header />
+      <Question />
       <Main>
-        <Osallistujat
-          handleAddName={lisääOsallistuja}
-          handleRemoveName={poistaOsallistuja}
-          shuffleNames={sekoitaOsallistujat}
-          sortNames={lajitteleOsallistujat}
+        <Participants
+          handleAddName={handleAddName}
+          handleRemoveName={handleRemoveName}
+          shuffleNames={shuffleNames}
+          sortNames={sortNames}
           names={names}
         />
-        <Pyora participants={names} />
+        <Wheel participants={names} />
       </Main>
     </>
   );

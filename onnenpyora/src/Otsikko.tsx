@@ -1,11 +1,11 @@
 // Tämä tiedosto tekee koko sovelluksen otsikon.
 
 // lisätään tarvittavat importit
-
-import {FC} from 'react';
+import React, {FC} from 'react';
 import styled from 'styled-components';
 
-const OtsikkoSisältö = styled.otsikko`
+// Tyyli koodi
+const HeaderContainer = styled.header`
     background-color: #191970;
     color: #F0F8FF;
     min-height: 100px;
@@ -16,8 +16,9 @@ const OtsikkoSisältö = styled.otsikko`
     font-size: 50px;
 `;
 
-export const Otsikko: FC = () => (
-    <OtsikkoSisältö>
-        <h1>Onnenpyörä</h1>
-    </OtsikkoSisältö>
-)
+// Ohjelman koodi jossa luodaan otsikko
+export const Header: FC = () => (
+    <HeaderContainer>
+      <h1>Onnenpyörä</h1>
+    </HeaderContainer>
+  );

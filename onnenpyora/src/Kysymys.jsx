@@ -1,1 +1,0 @@
-// Näyttää kysymys osion otsikon alapuolella.
