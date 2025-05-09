@@ -59,12 +59,8 @@ export const Participants: FC<PracticipantsProps> = ({
     const hasParticipants = names.length > 0
 
     const validateInput = (name: string) => {
-        const specialCharPattern = /[^a-zA-Z0-9 ]/;
         if (!name.trim()) {
             return 'Osallistujan nimi tarvitaan';
-        }
-        if (specialCharPattern.test(name)) {
-            return 'Osallistuja ei voi sisältää eirkois merkkejä';
         }
         return '';
     };
