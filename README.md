@@ -35,4 +35,4 @@ Nyt kuin omistat kaikki tarvitatav komponentit ja pohjat voit aloittaa koodin ki
 * **styles.ts**: Tällätä löytyy kaikille jaetut tyylit ympäri sovellusta
 
 Alapuolella linkki tämän hetkiseen julkaistuun sovellukseen:
-https://onnenpyora-pavg.vercel.app/
+https://onnenpyora-one.vercel.app/
