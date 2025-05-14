@@ -2,7 +2,7 @@
 
 // Tarvittavat importit
 import styled from 'styled-components';
-import React from 'react'
+import {useState} from 'react'
 
 // Tuodaan loput tiedostot pää tiedostoon
 import {Participants} from './Osallistujat';
@@ -12,7 +12,6 @@ import {Header} from './Otsikko';
 
 // Viten mukana tulleiden tiedostojen importit
 import './App.css';
-import {useState} from 'react';
 
 // Sivun omat ulkonäkö muutokset
 const Main = styled.main`
@@ -28,6 +27,7 @@ const Main = styled.main`
 `;
 
 // Ohjelman päätiedoston luonti
+
 export const MAX_PARTICIPANTS = 100; // Laittaa osallistuja rajan 100
 
 // Halitaan ossalistujien nimien lisäämistä, poistamista, lajittelua ja sekoitusta
