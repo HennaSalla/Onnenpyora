@@ -29,7 +29,6 @@ export const Question = () => {
         <div>
           {editable ? (
             <Input
-              ref={(input) => input && input.focus()}
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               onBlur={handleBlur}
