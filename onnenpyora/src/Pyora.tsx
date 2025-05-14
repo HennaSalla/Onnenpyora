@@ -201,6 +201,7 @@ export const Wheel: React.FC<Props> = ({participants}) => {
             const winningSector = Math.floor(normalizedRotation / sliceAngle);
 
             setPopupWinner(participants[winningSector]);
+            participants.splice(winningSector,1) // Poistaa juuri voittaneen osallistujan pyörästä
             setShowPopup(true);
         };
 
