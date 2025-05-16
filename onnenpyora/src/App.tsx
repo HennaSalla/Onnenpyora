@@ -2,7 +2,7 @@
 
 // Tarvittavat importit
 import styled from 'styled-components';
-import {useState} from 'react'
+import {useState, useEffect, use} from 'react'
 
 // Tuodaan loput tiedostot pää tiedostoon
 import {Participants} from './Osallistujat';
@@ -32,7 +32,8 @@ export const MAX_PARTICIPANTS = 100; // Laittaa osallistuja rajan 100
 
 // Halitaan ossalistujien nimien lisäämistä, poistamista, lajittelua ja sekoitusta
 function App() {
-  const [names, setNames] = useState<string[]>([]);
+  const [names, setNames] = useState<string[]>([])
+  
 
   // Osallistujien lisäämisen hallinta
   const handleAddName = (name: string) => {
@@ -58,7 +59,8 @@ function App() {
     setNames(sortedNames);
   };
 
-  // Tuodaan muut komponentit tiedostoon
+
+
   return (
     <>
       <Header />

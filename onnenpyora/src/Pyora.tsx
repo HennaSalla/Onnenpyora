@@ -4,7 +4,7 @@
 import React, {useRef, useState, useEffect} from 'react';
 import confetti from 'canvas-confetti';
 import styled from 'styled-components';
-import {capitalize} from './utils';
+import {capitalize} from './capitalize';
 import {Button} from './styles';
 
 // Ohjelman tyyli

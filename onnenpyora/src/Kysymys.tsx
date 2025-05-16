@@ -1,14 +1,23 @@
 // Näyttää kysymys osion otsikon alapuolella.
 
 // Tuodaan tarvittavat importit
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Input, EditWarpper, EditIcon } from './styles';
-import { FiEdit } from 'react-icons/fi'; // Tuodaan editti ikoni
+import { FiEdit } from 'react-icons/fi'; // Tuodaan editti ikon
+import { getItem, setItem } from "./useLocalStorege";
 
 // Tiedoston koodi
 
 export const Question = () => {
-    const [question, setQuestion] = useState('Mitä arvotaan?')
+    const [question, setQuestion] = useState(() => {
+      const item = getItem('question');
+      return item || 'Mitä arvotaan?';
+    });
+
+    useEffect(() => {
+      setItem('question', question);
+    }, [question]);
+
     const [editable, setEditable] = useState(false);
 
     const handleClick = () => {

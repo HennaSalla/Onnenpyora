@@ -3,9 +3,9 @@
 // Tuodaan tarvittavat importit
 import styled from "styled-components";
 import {Section, Button, Input} from './styles';
-import React, {FC, useState} from 'react';
+import React, {FC, useState, useEffect} from 'react';
 import {MAX_PARTICIPANTS} from './App';
-import {capitalize} from './utils';
+import {capitalize} from './capitalize';
 
 // Sivun sisäiset tyylit
 const ListItemContainer = styled.div`
@@ -52,9 +52,8 @@ export const Participants: FC<PracticipantsProps> = ({
     sortNames,
     names,
 }) => {
-    const [praticipant, setParticipant] = useState('');
+    const [praticipant, setParticipant] =  useState('')
     const [error, setError] = useState('');
-
     const isMaxParticipantsReached = names.length >= MAX_PARTICIPANTS;
     const hasParticipants = names.length > 0
 
