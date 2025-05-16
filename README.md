@@ -31,7 +31,8 @@ Nyt kuin omistat kaikki tarvitatav komponentit ja pohjat voit aloittaa koodin ki
 * **Osallistujat.tsx**: Tuo osallistujen lisäsys listan näkyviin. sisältää myös function joka estää tyhjien nimien lisäämisen listaan
 * **Kysymys.tsx**: Tuo esiin kysymys ruudun jossa voit laittaa mitä sinä kertana tahdotaan arpoa.
 * **Pyora.tsx**: Tällä löytyy kaikki mitä itse onnenpyörään tekemiseen tarvitaan niin ulkonäöllisesti kuin toiminnolisesti.
-* **utlis.ts**: Täältä löytyy pieniä apuohjelmia joita käytetään ympäri projektia
+* **capitalize.ts**: Täältä löytyy koodi ensimäisen kirjaimen muutamiseen isosksi
+* **useLocalStorrege.ts**: Tuo koodin joka talentaa tietoja local storageen
 * **styles.ts**: Tällätä löytyy kaikille jaetut tyylit ympäri sovellusta
 
 Alapuolella linkki tämän hetkiseen julkaistuun sovellukseen:
