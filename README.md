@@ -10,21 +10,30 @@ Varmista ensin että sinulla on asennettuna `node.js` koneellesi. Kirjoita komen
 
 ![Näyttökuva 2025-04-29 125013](https://github.com/user-attachments/assets/612a53dd-12fc-407a-a812-30e38b4f196e)
 
-Sen jälkeen VisualStudio Codessa luodaan vite projekti kirjoittamalla terminaaliin `npm create vite@latest onnenpyora --template react` jonka jälkeen terminaalista valitaan frameworkiksi React ja variantiksi JavaSript. Tämän jälkeen kijoita viellä terminaaliin komennot `cd onnenpyora`, `npm instaal` `npm run dev` jonak jälkeen voit avata projektin tästä linkistä: http://localhost:5173/ jonkä jälkeen sinulle pitäisi aueta seuraavan näköinen sivu:
+Sen jälkeen VisualStudio Codessa luodaan vite projekti kirjoittamalla terminaaliin `npm create vite@latest onnenpyora --template react` jonka jälkeen terminaalista valitaan frameworkiksi React ja variantiksi JavaSript. Tämän jälkeen kijoita viellä terminaaliin komennot `cd onnenpyora`, `npm install` `npm run dev`.
 
-![image](https://github.com/user-attachments/assets/401104c7-c30d-4a2f-a31b-fdf89e4150aa)
+Projektissa käyttämäni teknologiat:
+* **Vite** - Tarjoaa nopean kehitysympäristön, joka on optimoitu erityisesti verkkoprojekteihin
+* **React** - Suosittu JavaScript-kirjasto käyttöliittymien rakentamiseen
+* **TypeScript** - JavaSriptin lisä, joka parantaa koodin laatua ja ylläpitävyyttä
+* **styled-components** - Kirjasto CSS-in-JS:n kirjoittamiseen. Se mahdollistaa tyylien rajaamisen komponentteihin ja tarjoaa dynaamisemman lähemstymistavan tyylien luomiseen.
+* **canvas** - Tehokas HTML-elementti. Sitä käytetään piirtämään grafiikkaa, animaatioita ja muuta dynaamista sisältöä verkkosivulle. Omassa projektissa se on käytössä enimäkseen pyörän animaation luonissa.
+* **canvas-confetti** - JavaScript-kirjasto jolla voit lisätä konfettianimaatioita. Tätä käytetäänkin voittajan julkaisemisessa.
+* **react-icons** - tuo mahdollisuuden tuoda erinlaisa ikooneja projektiin
 
-Nyt sinulla on jo projektissasi React, Vite ja TypeScript. Seuraava vaihe on asentaa vscode-styled-components. Lataa aluksi VisualSudio codeen lisä osa `vscode-styled-components` ja sen jälkeen kirjoita terminaaliin komento `npm install styled-components` jonka jälkeen nämä tyylit ovat myös käytössäsi. En ole ihan varma tarvitsetko lisäosaa tyylien toimimiseen vai riittääkö pelkkä install lointi mutta itse en ainakaan saanut niitä toimimaan vain toisen kanssa. Tyylien lataaminen tuo projektiin kansiot `package-lock.json` ja `package.json` projektin juureen.
-
-Kun haluat käyttää canvasta apunasi lataa lisäosat `Canvas` ja `Canvas Best Practice`. Projektissa käytän canvasta eritoten konffeti efektiin arvonnan voittajan selvitessä.
+Yläpuolella onkin miten vite tuodaan luonti viaheessa jo projektiin. Muut on erikseen ladattu jälkikäteen komenoilla. TypeScriptin voit ladata komenolla: `npm install TypeScript`, styled-componentsin taas komenolla: `npm install styled-components`, canvasin komenolla: `npm install canvas`, canvas-confettin komenolla: `npm install canvas-confetti` ja react-icon komenolla: `npm install react-icons`.
 
 Nyt kuin omistat kaikki tarvitatav komponentit ja pohjat voit aloittaa koodin kirjoittamisen. Itse päädyin laittamaan kaikki komponentit eri tiedostoihin pitäen näin ollen koodin lyhyenä ja siistinä. Tämä myös yksin kertaistaa itselleni koodin lukemista. Tässä on listattuna kaikkista tärkeimät koodi tiedosto ja mitä ne sisältää:
 
-* **main.jsx**: Viten mukana tullut tiedosto joka on koko projekitn aloitus piste.
-* **App.jsx**: Koko projektin pääkomponenti jossa yhdistetään muut komponentit ja lisätään mahdollisuus lisätä, poistaa, järjestellä ja sekoitella osallistujia listalla
-* **Otsikko.jsx**: Sivun ylälaita ja näin ollen myös sovelluksen otsikko
-* **Osallistujat.jsx**: Tuo osallistujen lisäsys listan näkyviin. sisältää myös function joka estää tyhjien nimien lisäämisen listaan
-* **Kysymys.jsx**: Tuo esiin kysymys ruudun jossa voit laittaa mitä sinä kertana tahdotaan arpoa.
-* **Pyora.jsx**: Tällä löytyy kaikki mitä itse onnenpyörään tekemiseen tarvitaan niin ulkonäöllisesti kuin toiminnolisesti.
-* **utlis.ts**: Täältä löytyy pieniä apuohjelmia joita käytetään ympäri projektia
+* **main.tsx**: Viten mukana tullut tiedosto joka on koko projekitn aloitus piste.
+* **App.tsx**: Koko projektin pääkomponenti jossa yhdistetään muut komponentit ja lisätään mahdollisuus lisätä, poistaa, järjestellä ja sekoitella osallistujia listalla
+* **Otsikko.tsx**: Sivun ylälaita ja näin ollen myös sovelluksen otsikko
+* **Osallistujat.tsx**: Tuo osallistujen lisäsys listan näkyviin. sisältää myös function joka estää tyhjien nimien lisäämisen listaan
+* **Kysymys.tsx**: Tuo esiin kysymys ruudun jossa voit laittaa mitä sinä kertana tahdotaan arpoa.
+* **Pyora.tsx**: Tällä löytyy kaikki mitä itse onnenpyörään tekemiseen tarvitaan niin ulkonäöllisesti kuin toiminnolisesti.
+* **capitalize.ts**: Täältä löytyy koodi ensimäisen kirjaimen muutamiseen isosksi
+* **useLocalStorege.ts**: Tuo koodin joka talentaa tietoja local storageen
 * **styles.ts**: Tällätä löytyy kaikille jaetut tyylit ympäri sovellusta
+
+Alapuolella linkki tämän hetkiseen julkaistuun sovellukseen:
+https://onnenpyora-one.vercel.app/
