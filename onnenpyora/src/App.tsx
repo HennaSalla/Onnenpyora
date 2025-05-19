@@ -9,6 +9,7 @@ import {Participants} from './Osallistujat';
 import {Question} from './Kysymys';
 import {Wheel} from './Pyora';
 import {Header} from './Otsikko';
+import { setItem, getItem } from './useLocalStorege';
 
 // Viten mukana tulleiden tiedostojen importit
 import './App.css';
@@ -32,8 +33,14 @@ export const MAX_PARTICIPANTS = 100; // Laittaa osallistuja rajan 100
 
 // Halitaan ossalistujien nimien lisäämistä, poistamista, lajittelua ja sekoitusta
 function App() {
-  const [names, setNames] = useState<string[]>([])
-  
+  // Tallenetaan osallistuja lista LocalStorageen
+  const [names, setNames] = useState<string[]>(() => {
+    const item = getItem('names');
+    return item || []
+  });
+  useEffect(() => {
+    setItem('names', names);
+  }, [names]);
 
   // Osallistujien lisäämisen hallinta
   const handleAddName = (name: string) => {
@@ -58,7 +65,6 @@ function App() {
     const sortedNames = [...names].sort((a,b) => a.localeCompare(b));
     setNames(sortedNames);
   };
-
 
 
   return (
