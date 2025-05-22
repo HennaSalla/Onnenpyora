@@ -33,14 +33,15 @@ export const MAX_PARTICIPANTS = 100; // Laittaa osallistuja rajan 100
 
 // Halitaan ossalistujien nimien lisäämistä, poistamista, lajittelua ja sekoitusta
 function App() {
-  // Tallenetaan osallistuja lista LocalStorageen
   const [names, setNames] = useState<string[]>(() => {
     const item = getItem('names');
-    return item || [];
+    return item || []
   });
+
   useEffect(() => {
-    setItem('names', names);
+    setItem('names', names)
   }, [names]);
+  
 
   // Osallistujien lisäämisen hallinta
   const handleAddName = (name: string) => {
