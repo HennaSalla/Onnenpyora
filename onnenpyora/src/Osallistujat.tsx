@@ -52,7 +52,7 @@ export const Participants: FC<PracticipantsProps> = ({
     sortNames,
     names,
 }) => {
-    const [praticipant, setParticipant] =  useState('')
+    const [praticipant, setParticipant] =  useState('');
     const [error, setError] = useState('');
     const isMaxParticipantsReached = names.length >= MAX_PARTICIPANTS;
     const hasParticipants = names.length > 0
@@ -74,6 +74,8 @@ export const Participants: FC<PracticipantsProps> = ({
             setError('');
         }
     };
+
+    
 
     return (
         <Section>
@@ -110,11 +112,10 @@ export const Participants: FC<PracticipantsProps> = ({
                     Lajittele
                 </Button>
             </ButtonGroup>
-
             <ul>
                 {names.map((name, index) => (
                     <ListItemContainer key={index}>
-                        <ListItem>{capitalize(name)}</ListItem>
+                             <ListItem>{capitalize(name)}</ListItem>
                         <Button onClick={() => handleRemoveName(index)}>
                             Poista
                         </Button>

@@ -36,6 +36,7 @@ const Popup = styled.div`
     }
 `;
 
+// Tyyli pyöräytä naappia varten
 const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;

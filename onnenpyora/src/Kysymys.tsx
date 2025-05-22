@@ -9,6 +9,7 @@ import { getItem, setItem } from "./useLocalStorege";
 // Tiedoston koodi
 
 export const Question = () => {
+  // Tallenetaan kysymys LocalStorageen
     const [question, setQuestion] = useState(() => {
       const item = getItem('question');
       return item || 'Mitä arvotaan?';
