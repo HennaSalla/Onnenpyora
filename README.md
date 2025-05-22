@@ -26,10 +26,10 @@ Yläpuolella onkin miten vite tuodaan luonti viaheessa jo projektiin. Muut on er
 Nyt kuin omistat kaikki tarvitatav komponentit ja pohjat voit aloittaa koodin kirjoittamisen. Itse päädyin laittamaan kaikki komponentit eri tiedostoihin pitäen näin ollen koodin lyhyenä ja siistinä. Tämä myös yksin kertaistaa itselleni koodin lukemista. Tässä on listattuna kaikkista tärkeimät koodi tiedosto ja mitä ne sisältää:
 
 * **main.tsx**: Viten mukana tullut tiedosto joka on koko projekitn aloitus piste.
-* **App.tsx**: Koko projektin pääkomponenti jossa yhdistetään muut komponentit ja lisätään mahdollisuus lisätä, poistaa, järjestellä ja sekoitella osallistujia listalla
+* **App.tsx**: Koko projektin pääkomponenti jossa yhdistetään muut komponentit ja lisätään mahdollisuus lisätä, poistaa, järjestellä ja sekoitella osallistujia listalla. Sen lisäksi sisältää ominaisuuden tallentaa osallistuja listan Local Storageen.
 * **Otsikko.tsx**: Sivun ylälaita ja näin ollen myös sovelluksen otsikko
 * **Osallistujat.tsx**: Tuo osallistujen lisäsys listan näkyviin. sisältää myös function joka estää tyhjien nimien lisäämisen listaan
-* **Kysymys.tsx**: Tuo esiin kysymys ruudun jossa voit laittaa mitä sinä kertana tahdotaan arpoa.
+* **Kysymys.tsx**: Tuo esiin kysymys ruudun jossa voit laittaa mitä sinä kertana tahdotaan arpoa. Sen lisäksi siältää ominaisuuden joka tallentaa kysymys kentän Local Storageen.
 * **Pyora.tsx**: Tällä löytyy kaikki mitä itse onnenpyörään tekemiseen tarvitaan niin ulkonäöllisesti kuin toiminnolisesti.
 * **capitalize.ts**: Täältä löytyy koodi ensimäisen kirjaimen muutamiseen isosksi
 * **useLocalStorege.ts**: Tuo koodin joka talentaa tietoja local storageen
